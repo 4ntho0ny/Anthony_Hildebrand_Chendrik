@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+:root{
+    --dark-slate-gray: rgb(47,79,79);
+    --light-gray: rgb(220,220,220);
+    --dark-gray: rgb(230,230,230);
+    --medium-sea-green: rgb(80,184,130);
+    --silver: rgb(192,192,192);
+}
+.contact-logo{
+    width: 2.4rem;
+    height: 2.4rem;
+}
+body{
+    background-color: var(--light-gray);
+    font-family: 'Ubuntu Mono', monospace;
+}
+.container{
+    display: flex;
+}
+h3{
+    text-transform: uppercase;
+    font-size: 25px;
+    padding: 10px;
+    margin: 10px;
+    background-color: black;    
+    color: var(--medium-sea-green);
+}
+#curiosities{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.curiosity{
+    background-color: var(--silver);
+    list-style: none;
+    font-size: 1.28rem;
+    letter-spacing: 0.2px;
+    border-radius: 2rem;
+    max-width: 19rem;
+    margin: 10px;
+    padding: 20px;
+}
+#initial{
+    background-color: var(--dark-slate-gray);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+#div-mae-list-contacts{
+    position: absolute;
+    left: 3.563rem;
+    top:14.375rem;
+}
+#list-contacts{
+    display: flex;
+    /* top right bottom left */
+    margin: 10px;
+}
+/* li de contacts */
+.contact{
+    width: 2.7rem;
+    height: 2.7rem;
+    margin: 5px;
+    background-color: var(--dark-gray);
+    box-shadow: 3px 3px gray;
+    border-radius: 30%;
+    padding: 5px;
+}
+#hello-world{
+    position: absolute;
+    left: 4.875rem;
+    top: 8.75rem;
+    font-size: 27px;
+    color: white;
+}
+#name{
+    position: absolute;
+    left: 4.65rem;
+    top: 10.5rem;
+    font-size: 40px;
+    font-weight: bold;
+}
+#borda-1{
+    position: absolute;
+    top: 6.5rem;
+    right: 13.375rem;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.2rem;
+    width: 320px;
+    height: 320px;
+}
+#foto-anthony{
+    position: absolute;
+    top: 115px;
+    right: 245px;
+    width: 320px;
+    height: 320px;
+    border-style: solid;
+    border-color: var(--medium-sea-green);
+    border-width: 0.2rem;
+    padding: 6px;
+}
+#projects{
+    display: flex;
+}
+.flip-card-front{
+    width: 15.65rem;
+    height: 19.37rem;
+    margin: 0.7rem;
+    background-color: var(--dark-slate-gray);
+    /* border-color: black;
+    border-width: 0.063rem;
+    border-style: solid;
+    border-radius: 1rem; */
+}
