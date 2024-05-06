@@ -1,118 +1,129 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 
 :root{
-    --dark-slate-gray: rgb(47,79,79);
-    --light-gray: rgb(220,220,220);
-    --dark-gray: rgb(230,230,230);
-    --medium-sea-green: rgb(80,184,130);
-    --silver: rgb(192,192,192);
+    --dark-slate-green: rgb(47,79,79);
+    --slate-gray: rgb(163, 166, 170);
+    --light-gray: rgb(230,230,230);
+    --medium-sea-green: rgb(54, 130, 90);
+    --ubuntu-font: 'Ubuntu Mono', monospace;
 }
-.contact-logo{
-    width: 2.4rem;
-    height: 2.4rem;
+
+* {
+    box-sizing: border-box;
 }
-body{
+
+html{
     background-color: var(--light-gray);
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: var(--ubuntu-font);
 }
-.container{
-    display: flex;
+
+body {
+    margin: 0;
 }
-h3{
-    text-transform: uppercase;
-    font-size: 25px;
-    padding: 10px;
-    margin: 10px;
-    background-color: black;    
-    color: var(--medium-sea-green);
-}
-#curiosities{
-    margin: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-.curiosity{
-    background-color: var(--silver);
-    list-style: none;
-    font-size: 1.28rem;
-    letter-spacing: 0.2px;
-    border-radius: 2rem;
-    max-width: 19rem;
-    margin: 10px;
-    padding: 20px;
-}
-#initial{
-    background-color: var(--dark-slate-gray);
-    width: 100%;
-    height: 100vh;
+
+#initial {
+    background-color: var(--dark-slate-green);
     position: relative;
+    height: 27rem;
 }
-#div-mae-list-contacts{
+
+#typing-hello {
     position: absolute;
-    left: 3.563rem;
-    top:14.375rem;
+    top: 10rem;
+    left: 8rem;
 }
+
+#typing-hello #hello-world{
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0 0 6px 0;
+    overflow: hidden;
+    width: 100%;
+    border-right: .15em solid black;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: 
+        typing 10s steps(30),
+        cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    50% { border-color: transparent }
+}
+
+@keyframes typing {
+    from {width: 1%}
+    to {width: 100%}
+}
+
+#typing-name {
+    position: absolute;
+    top: 12rem;
+    left: 8rem;
+}
+
+#typing-name #name{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--light-gray);
+}
+
 #list-contacts{
     display: flex;
-    /* top right bottom left */
-    margin: 10px;
+    position: absolute;
+    right: 12rem;
+    bottom: 2rem;
 }
-/* li de contacts */
+
 .contact{
-    width: 2.7rem;
-    height: 2.7rem;
+    width: 3rem;
+    height: 3rem;
     margin: 5px;
-    background-color: var(--dark-gray);
+    background-color: var(--light-gray);
     box-shadow: 3px 3px gray;
     border-radius: 30%;
     padding: 5px;
 }
-#hello-world{
-    position: absolute;
-    left: 4.875rem;
-    top: 8.75rem;
-    font-size: 27px;
-    color: white;
+
+.contact-logo{
+    width: 2.4rem;
+    height: 2.4rem;
 }
-#name{
-    position: absolute;
-    left: 4.65rem;
-    top: 10.5rem;
-    font-size: 40px;
-    font-weight: bold;
-}
-#borda-1{
-    position: absolute;
-    top: 6.5rem;
-    right: 13.375rem;
-    border-style: solid;
-    border-color: black;
-    border-width: 0.2rem;
-    width: 320px;
-    height: 320px;
-}
+
 #foto-anthony{
     position: absolute;
-    top: 115px;
-    right: 245px;
-    width: 320px;
-    height: 320px;
-    border-style: solid;
-    border-color: var(--medium-sea-green);
-    border-width: 0.2rem;
-    padding: 6px;
+    right: 12rem;
+    bottom: 7rem;
+    width: auto;
+    height: 18rem;
+    background-color: var(--slate-gray);
+    border: 7px solid var(--medium-sea-green);
+    border-radius: 30px;
 }
-#projects{
-    display: flex;
+
+/* .flip-card{
+    background-color: transparent;
+    width: 250px;
+    height: 350px;
+    margin: 5px;
 }
-.flip-card-front{
-    width: 15.65rem;
-    height: 19.37rem;
-    margin: 0.7rem;
-    background-color: var(--dark-slate-gray);
-    /* border-color: black;
-    border-width: 0.063rem;
-    border-style: solid;
-    border-radius: 1rem; */
+.flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
 }
+.flip-card:hover .flip-card-inner{
+    transform: rotatey(180deg);
+}
+.flip-card-front, .flip-card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-gray);
+    backface-visibility: hidden;
+}
+.flip-card-back{
+    transform: rotateY(180deg);
+} */
