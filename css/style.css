@@ -29,7 +29,7 @@ body {
 
 #typing-hello {
     position: absolute;
-    top: 10rem;
+    top: 12rem;
     left: 8rem;
 }
 
@@ -38,13 +38,12 @@ body {
     font-weight: 500;
     padding: 0 0 6px 0;
     overflow: hidden;
-    width: 100%;
     border-right: .15em solid black;
     white-space: nowrap;
     margin: 0 auto;
-    animation: 
-        typing 10s steps(30),
-        cursor .4s step-end infinite alternate;
+    animation:
+        typing 2s steps(30),
+        cursor .3s step-end infinite alternate;
 }
 
 @keyframes cursor {
@@ -52,8 +51,8 @@ body {
 }
 
 @keyframes typing {
-    from {width: 1%}
-    to {width: 100%}
+    from { width: 0; }
+    to { width: 150px; }
 }
 
 #typing-name {
@@ -69,6 +68,7 @@ body {
 }
 
 #list-contacts{
+    list-style: none;
     display: flex;
     position: absolute;
     right: 12rem;
