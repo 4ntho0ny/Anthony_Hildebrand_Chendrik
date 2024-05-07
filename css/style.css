@@ -25,39 +25,42 @@ body {
     background-color: var(--dark-slate-green);
     position: relative;
     height: 27rem;
+    margin: 0 3% 0 3%;
+    border-radius: 0 0 20px 20px;
 }
 
 #typing-hello {
     position: absolute;
-    top: 12rem;
+    display: inline-block;
+    top: 9rem;
     left: 8rem;
 }
 
-#typing-hello #hello-world{
+#typing-hello #hello-world {
     font-size: 1.5rem;
     font-weight: 500;
-    padding: 0 0 6px 0;
+    padding: 0 0 5px 0;
     overflow: hidden;
     border-right: .15em solid black;
     white-space: nowrap;
-    margin: 0 auto;
     animation:
-        typing 2s steps(30),
+        typing-hello 2s steps(20),
         cursor .3s step-end infinite alternate;
 }
 
 @keyframes cursor {
-    50% { border-color: transparent }
+    50% { border-color: transparent; }
 }
 
-@keyframes typing {
+@keyframes typing-hello {
     from { width: 0; }
-    to { width: 150px; }
+    to { width: 100%; }
 }
 
 #typing-name {
     position: absolute;
-    top: 12rem;
+    display: inline-block;
+    top: 11.5rem;
     left: 8rem;
 }
 
@@ -65,13 +68,25 @@ body {
     font-size: 2rem;
     font-weight: bold;
     color: var(--light-gray);
+    padding: 0 6px 0 0;
+    overflow: hidden;
+    border-right: .15em solid var(--light-gray);
+    white-space: nowrap;
+    animation:
+        typing-name 2.5s steps(30),
+        cursor .3s step-end infinite alternate;
+}
+
+@keyframes typing-name {
+    from { width: 0; }
+    to { width: 100%; }
 }
 
 #list-contacts{
     list-style: none;
     display: flex;
     position: absolute;
-    right: 12rem;
+    right: 12.5rem;
     bottom: 2rem;
 }
 
